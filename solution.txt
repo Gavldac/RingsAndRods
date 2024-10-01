@@ -1,0 +1,17 @@
+        Rod[] rods = new Rod[10];
+        IntStream.range(0, rods.length).forEach(i -> rods[i] = new Rod());
+    
+    
+        for (int i = 0; i < rings.length(); ){
+            char color = rings.charAt(i++);
+            int rodNum = Character.getNumericValue(rings.charAt(i++));
+            
+            rods[rodNum].setRingColor(color);
+        }
+    
+        int counter = 0; 
+        for (Rod r : rods){
+            if (r.getHas3Rings())
+                counter++;
+        }
+        return counter;
