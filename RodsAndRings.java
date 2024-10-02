@@ -74,8 +74,4 @@ public class RodsAndRings {
         System.out.println("Tested results = " + countRodsWith3Colors(test5));
         System.out.println();
     }
-    
-    
-
-
 }
