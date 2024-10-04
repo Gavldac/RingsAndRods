@@ -1,9 +1,13 @@
+package RunDown;
+
+import java.util.stream.IntStream;
 
 public class LinkedList {
     private static class Node {
         boolean red;
         boolean green;
         boolean blue;
+        
 
         Node next;
 
@@ -30,6 +34,7 @@ public class LinkedList {
 
     private Node head;
     private Node tail;
+    int size;
 
     LinkedList() {
         head = null;
@@ -45,17 +50,17 @@ public class LinkedList {
             tail.next = newNode;
             tail = newNode;
         }
+        size++;
     }
 
     public static int countRodsWith3Colors(String ringInfo) {
 
         LinkedList list = new LinkedList();
-
-        for (int i = 0; i < 10; i++) {
-            list.add();
-        }
-
-
+        
+        //Since we are told to expect 10 rods each time 
+        //we will create 10 nodes to hold their information
+        IntStream.range(0, 10).forEach(i -> list.add());
+      
 
         for (int i = 0; i < ringInfo.length(); /* left blank to interate inside the loop */) {
             char color = ringInfo.charAt(i++);
