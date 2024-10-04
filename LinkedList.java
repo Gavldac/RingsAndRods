@@ -47,7 +47,7 @@ public class LinkedList {
         }
     }
 
-    public static int countRodsWith3Colors(String str) {
+    public static int countRodsWith3Colors(String ringInfo) {
 
         LinkedList list = new LinkedList();
 
@@ -55,11 +55,11 @@ public class LinkedList {
             list.add();
         }
 
-        String rings = str;
 
-        for (int i = 0; i < rings.length(); /* left blank to interate inside the loop */) {
-            char color = rings.charAt(i++);
-            int rodNum = Character.getNumericValue(rings.charAt(i++));
+
+        for (int i = 0; i < ringInfo.length(); /* left blank to interate inside the loop */) {
+            char color = ringInfo.charAt(i++);
+            int rodNum = Character.getNumericValue(ringInfo.charAt(i++));
 
             Node current = list.head;
             for (int j = 0; j < rodNum; j++) {
